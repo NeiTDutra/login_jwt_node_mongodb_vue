@@ -5,8 +5,22 @@
 ### Tecnologias
 
 * Node.js
-  * Express.js
-  * mongoose.js
+
+```json
+
+"dependencies": {
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.17",
+    "morgan": "^1.10.0"
+  }
+
+```
 
 * JWT
 * MongoDB
