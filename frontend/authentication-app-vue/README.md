@@ -1,4 +1,4 @@
-# frontend
+# authentication-app-vue
 
 ## Project setup
 ```

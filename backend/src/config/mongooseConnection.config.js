@@ -7,12 +7,11 @@
  * ==> from https://www.youtube.com/watch?v=Vr-UMoAv8pk&list=PLb2HQ45KP0Ws0Zy6PHquJhBIaGLKcLaf6&index=2
  */
 
-//const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const database = require('./db.config');
 
-exports.conn = (mg) => {
-    mg.Promise = global.Promise;
-    mg.connect(database.local.localDatabaseUrl,
+    mongoose.Promise = global.Promise;
+    mongoose.connect(database.local.localDatabaseUrl,
         { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
         .then(() => {
             console.log('Conectado na base de dados!');
@@ -20,4 +19,3 @@ exports.conn = (mg) => {
             console.log(`Erro ao conectar com mongodb:... ${err}`);
             process.exit();
         });
-};

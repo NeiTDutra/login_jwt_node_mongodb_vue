@@ -13,9 +13,8 @@
 
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
-const mongooseConnection = require('./config/mongooseConnection.config');
 const morgan = require('morgan');
+const mongooseConnection = require('./config/mongooseConnection.config');
 
 // => rotas da API
 
@@ -28,7 +27,7 @@ const app = express();
 
 // => database config connection
 
-mongooseConnection.conn(mongoose);
+app.set('conn', 'mongooseConnection');
 
 // ==> app engine
 
