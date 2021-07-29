@@ -4,4 +4,4 @@
 
 :+1: Thanks for this
 
-:construction: Em desenvolvimento :construction:
+:construction: Under development :construction:
