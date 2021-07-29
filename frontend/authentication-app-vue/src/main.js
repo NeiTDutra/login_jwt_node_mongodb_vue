@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import VueSweetalert2 from 'vue-sweetalert2';
+// import Sweetalert from 'sweetalert';
 import App from './App.vue';
 import router from './router';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-Vue.use(VueSweetalert2);
+// Vue.use(Sweetalert);
 
 Vue.config.productionTip = false;
 
