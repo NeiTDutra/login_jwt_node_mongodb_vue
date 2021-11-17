@@ -5,7 +5,7 @@
             <div class="col-lg-6 offset-lg-3 col-sm-10 offset-sm-1">
                 <form
                     class="text-center border border-primary p-5"
-                    style="margin-top:70px; height;auto; padding-top:100px !important;"
+                    style="margin-top:10px; height;auto; padding-top:100px !important;"
                     v-on:submit.prevent="loginSubmitUserForm()"
                 >
                     <input
@@ -14,6 +14,7 @@
                         name="email"
                         id="email"
                         placeholder="Digite seu E-mail"
+                        required
                         v-model="loginForm.email"
                     />
                     <input
@@ -22,6 +23,7 @@
                         name="password"
                         id="password"
                         placeholder="Digite seu Password"
+                        required
                         v-model="loginForm.password"
                     />
                     <p>Não tem uma conta?
