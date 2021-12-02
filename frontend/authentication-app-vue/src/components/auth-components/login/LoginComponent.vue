@@ -8,24 +8,48 @@
                     style="margin-top:10px; height;auto; padding-top:100px !important;"
                     v-on:submit.prevent="loginSubmitUserForm()"
                 >
-                    <input
-                        type="email"
-                        class="form-control mb-5"
-                        name="email"
-                        id="email"
-                        placeholder="Digite seu E-mail"
-                        required
-                        v-model="loginForm.email"
-                    />
-                    <input
-                        type="password"
-                        class="form-control mb-5"
-                        name="password"
-                        id="password"
-                        placeholder="Digite seu Password"
-                        required
-                        v-model="loginForm.password"
-                    />
+                    <div class="form-group">
+                        <input
+                            type="email"
+                            class="form-control mb-5"
+                            name="email"
+                            id="email"
+                            placeholder="Digite seu E-mail"
+                            required
+                            v-model="loginForm.email"
+                            :class="{
+                                'is-invalid': isSubmited && $v.loginForm.email.$error,
+                            }"
+                        />
+                        <div
+                            v-if="isSubmited && !v.loginForm.email.required"
+                            class="invalid-feedback"
+                        >
+                            O campo email é obrigatório!
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input
+                            type="password"
+                            class="form-control mb-5"
+                            name="password"
+                            id="password"
+                            placeholder="Digite seu Password"
+                            required
+                            v-model="loginForm.password"
+                            :class="{
+                                'is-invalid': isSubmited && $v.loginForm.password.$error,
+                            }"
+                        />
+                        <div
+                            v-if="isSubmited && !v.loginForm.password.required"
+                            class="invalid-feedback"
+                        >
+                            O campo password é obrigatório!
+                        </div>
+                    </div>
+
                     <p>Não tem uma conta?
                         <router-link
                             to="/register"
