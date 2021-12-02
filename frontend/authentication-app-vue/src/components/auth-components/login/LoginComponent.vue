@@ -15,14 +15,13 @@
                             name="email"
                             id="email"
                             placeholder="Digite seu E-mail"
-                            required
                             v-model="loginForm.email"
                             :class="{
                                 'is-invalid': isSubmited && $v.loginForm.email.$error,
                             }"
                         />
                         <div
-                            v-if="isSubmited && !v.loginForm.email.required"
+                            v-if="isSubmited && !$v.loginForm.email.required"
                             class="invalid-feedback"
                         >
                             O campo email é obrigatório!
@@ -36,14 +35,13 @@
                             name="password"
                             id="password"
                             placeholder="Digite seu Password"
-                            required
                             v-model="loginForm.password"
                             :class="{
                                 'is-invalid': isSubmited && $v.loginForm.password.$error,
                             }"
                         />
                         <div
-                            v-if="isSubmited && !v.loginForm.password.required"
+                            v-if="isSubmited && !$v.loginForm.password.required"
                             class="invalid-feedback"
                         >
                             O campo password é obrigatório!

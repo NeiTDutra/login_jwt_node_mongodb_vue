@@ -4,7 +4,6 @@ Description
 
 import { required } from 'vuelidate/lib/validators';
 
-
 export default {
   name: 'LoginComponent',
   data() {
@@ -13,22 +12,22 @@ export default {
         email: null,
         password: null,
       },
-      isSubmited: false
+      isSubmited: false,
     };
   },
 
   validations: {
     loginForm: {
       email: { required },
-      password: { required }
-    }
+      password: { required },
+    },
   },
 
   methods: {
     loginSubmitUserForm() {
-
       this.isSubmited = true;
       this.$v.$touch();
+
       if (this.$v.$invalid) {
         return;
       }

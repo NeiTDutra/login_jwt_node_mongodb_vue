@@ -1,10 +1,10 @@
 import Vue from 'vue';
 // import Sweetalert from 'sweetalert';
+import Vuelidate from 'vuelidate';
 import App from './App.vue';
 import router from './router';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '..node-modules/nprogress/nprogress.css';
-import Vuelidate from 'vuelidate';
+import 'nprogress/nprogress.css';
 
 // Vue.use(Sweetalert);
 Vue.use(Vuelidate);
